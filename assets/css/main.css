@@ -24,6 +24,23 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+.profile-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Optional: Adds some space between profile picture and text */
+}
+
+.profile-picture {
+    width: 90px; /* Adjust the size as per your design */
+    height: 90px; /* Adjust the size as per your design */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 20px; /* Optional: Adds some space between profile picture and text */
+}
+
+.text-content {
+    flex: 1; /* Allows the text content to take up remaining space */
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
