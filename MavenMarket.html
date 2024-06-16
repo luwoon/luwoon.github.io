@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MavenMarket Analytics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Pang Lu Woon</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<!--<li><a href="generic.html" class="active">Generic</a></li>
+						<li><a href="elements.html">Elements</a></li>-->
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">MavenMarket Analytics</h1>
+							<p>This is the final project from the 'Microsoft Power BI Desktop for Business Intelligence' Udemy course. I went through the whole business intelligence workflow, from connecting and preprocessing data to creating a data model and building an interactive dashboard. My Power BI project file can be downloaded here.<br><br>
+								Eight CSV files were used for the project. Six (Products, Calendar, Customers, Regions, Returns, and Stores) were loaded onto Power BI as Text/CSV. The two other transaction data files were moved into a new folder on desktop and connected to Power BI through the folder path.<br><br>
+								Although the datasets were relatively clean and complete, I performed some wrangling to obtain more insights. The steps included:
+								<ul>
+									<li>Merging 'first_name' and 'last_name' columns, separated by a space, to create a 'full_name' column</li>
+									<li>Extracting year from 'birthdate' column</li>
+									<li>Creating a conditional column 'has_children' which equals 'N' if 'total_children' = 0 and 'Y' otherwise</li>
+									<li>Using statistics tools to return number of distinct product brands (111) and distinct product names (1560)</li>
+									<li>Adding calculated column 'discount_price', equal to 90% of original retail price, formatted as fixed decimal number and rounded to two digits</li>
+									<li>Replacing "null" values with zeros in 'recyclable' and 'low-fat' columns</li>
+									<li>Adding calculated column 'area_code' by extracting characters before the dash in 'store_phone' field</li>
+									<li>Using date tools in query editor to add the following columns: Start of Week, Name of Day, Start of Month, Name of Month, Quarter of Year, and Year</li>
+								</ul>
+								The data model created is shown below. The two data tables are connected to the lookup tables but not to each other. All relationships follow a one-to-many cardinality, with primary keys on the lookup side and foreign keys on the data side. Filters are all one-way, and the filter context flows downstream from lookup tables to data tables.</p>
+							<span class="image fit"><img src="images/MavenMarket Data Model.png" alt="" /></span>
+							<p>Next, I created DAX measures in preparation for data visualisation. The measures include:
+								<ul>
+									<li>'Years_Since_Remodel' which calculates number of years between current date and last remodel date</li>
+									<li>'End of Month' which returns last date of current month for each row</li>
+									<li>'60-Day Revenue' which calculates a running revenue total over a 60-day period</li>
+									<li>'YTD Revenue' which calculates year-to-date total revenue</li>
+									<li>'Priority' which equals 'High' for customers who own homes and have Golden membership cards (otherwise 'Standard')</li>
+									<li>'Current Age' which calculates current customer ages using 'birthdate' column</li>
+								</ul></p>
+							<span class="image fit"><img src="images/DAX.jpg" alt="" /></span>
+							<p>Finally, I created the dashboard. The features of the dashboard include (i) a matrix showing top 30 brands with data bars and conditional formatting, (ii) KPI cards, (iii) a map with country slicer, (iv) a treemap with drill down function, (v) a column chart to show the weekly revenue trend, and (vi) a gauge chart to compare the total revenue against the target revenue.</p>
+							<span class="image fit"><img src="images/MavenMarketDashboard.png" alt="" /></span>
+							<p>Insights:
+								<ul>
+									<li>From the previous month, Maven Market had improved by 5.69% in the number of transactions and by 5.61% in profit. The top three brands by total number of transactions were Hermanos, Ebony, and Tell Tale. Plato, BBB Best, and Cormorant had performed well in terms of profit margin. Despite being a better performer in number of transactions, Tell Tale had the second lower profit margin.</li>
+									<li>Drilling into the regions, the total transactions, profit, and returns in USA and Canada had decreased. The opposite was the case for Mexico.</li>
+									<li>Although the number of transactions had increased overall, the overall number of returns had increased slightly by 2.9%. The three brands with the highest return rates are Horatio, Nationeel, and High Quality.</li>
+									<li>The total revenue met the target revenue. However, USA and Canada did not meet their respective targets; only Mexico met its target.</li>
+									<li>Thus, while Maven Market had increased its number of transactions, attention must be brought to the increased number of returns. It would be meaningful to look into the brands with the highest rates of return. There is also space for USA and Canada to grow in terms of revenue.</li>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Pang Lu Woon. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
