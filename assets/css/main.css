@@ -27,7 +27,7 @@ section, summary, time, mark, audio, video {
 .profile-container {
     display: flex;
     align-items: center; /* Align items vertically */
-    margin-bottom: 20px; /* Optional: Adds some space between profile picture and text */
+    margin-bottom: 0px; /* Optional: Adds some space between profile picture and text */
 }
 
 .profile-picture {
