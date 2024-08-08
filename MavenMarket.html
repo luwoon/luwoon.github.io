@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class='no-js' >
+	
+	<head>
+		
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+		<title>MavenMarket Analytics</title>
+		
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.theme.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.transitions.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		
+	</head>
+	
+	<body>
+		
+		
+		<!--close button-->
+		<a href='index.html' class='close-btn' >
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		
+		<!--preloader-->
+		<div id='preloader' >
+		
+			<div class='loader' >
+				<img src='img/load.gif' alt='symp' >
+			</div>
+			
+		</div>
+		<!--/preloader-->
+		
+		
+		<div id='wrapper' >
+			
+			<section class='single-work' >
+				
+				<div class='container' >
+					
+					
+					<div class='row' >
+						
+						<!--<div class='col-md-8' >
+							
+							<img src='img/bg3.jpg' alt='symp' >
+						
+						</div>-->
+						
+						
+						<!--<div class='col-md-4' >
+							
+							<ul class='work-info' >
+								
+								<li>
+									
+									<h4><i class='ion-ionic' ></i>Client</h4>
+									
+									<p>Themeforest.net</p>
+									
+								</li>
+								
+								<li>
+									
+									<h4><i class='ion-ios-calendar-outline' ></i>Date</h4>
+									
+									<p>2015, June</p>
+									
+								</li>
+								
+								
+								
+								<li>
+									
+									<h4><i class='ion-ios-clock-outline' ></i>Time Taken</h4>
+									
+									<p>3 Weeks</p>
+									
+								</li>
+								
+								
+								
+								
+								
+								
+							</ul>
+							
+						</div>-->
+						
+						
+						
+					</div>
+					
+					
+					<div class='work-content' >
+						
+						<div class='block' >
+							
+							<h4></h4>
+							
+							<p>
+								This is the final project using Power Query, DAX, and Power BI, from the 'Microsoft Power BI Desktop for Business Intelligence' Udemy course. I went through the whole business intelligence workflow, from connecting and preprocessing data to creating a data model and building an interactive dashboard.<br><br>
+								Eight CSV files were used for the project. Six (Products, Calendar, Customers, Regions, Returns, and Stores) were loaded onto Power BI as Text/CSV. The two other transaction data files were moved into a new folder on desktop and connected to Power BI through the folder path.<br><br>
+								Although the datasets were relatively clean and complete, I performed some wrangling to obtain more insights. The steps included:
+								<ul>
+									<li>Merging 'first_name' and 'last_name' columns, separated by a space, to create a 'full_name' column</li>
+									<li>Extracting year from 'birthdate' column</li>
+									<li>Creating a conditional column 'has_children' which equals 'N' if 'total_children' = 0 and 'Y' otherwise</li>
+									<li>Using statistics tools to return number of distinct product brands (111) and distinct product names (1560)</li>
+									<li>Adding calculated column 'discount_price', equal to 90% of original retail price, formatted as fixed decimal number and rounded to two digits</li>
+									<li>Replacing "null" values with zeros in 'recyclable' and 'low-fat' columns</li>
+									<li>Adding calculated column 'area_code' by extracting characters before the dash in 'store_phone' field</li>
+									<li>Using date tools in query editor to add the following columns: Start of Week, Name of Day, Start of Month, Name of Month, Quarter of Year, and Year</li>
+								</ul>
+								The data model created is shown below. The two data tables are connected to the lookup tables but not to each other. All relationships follow a one-to-many cardinality, with primary keys on the lookup side and foreign keys on the data side. Filters are all one-way, and the filter context flows downstream from lookup tables to data tables.</p>
+							<span class="image fit"><img src="img/portfolio/ Data Model.png" alt="" style="width: 800px"/></span>
+							<p>Next, I created DAX measures in preparation for data visualisation. The measures include:
+								<ul>
+									<li>'Years_Since_Remodel' which calculates number of years between current date and last remodel date</li>
+									<li>'End of Month' which returns last date of current month for each row</li>
+									<li>'60-Day Revenue' which calculates a running revenue total over a 60-day period</li>
+									<li>'YTD Revenue' which calculates year-to-date total revenue</li>
+									<li>'Priority' which equals 'High' for customers who own homes and have Golden membership cards (otherwise 'Standard')</li>
+									<li>'Current Age' which calculates current customer ages using 'birthdate' column</li>
+								</ul></p>
+							<span class="image fit"><img src="img/portfolio/DAX.jpg" alt="" style="width: 800px"/></span>
+							<p>Finally, I created the dashboard. The features of the dashboard include (i) a matrix showing top 30 brands with data bars and conditional formatting, (ii) KPI cards, (iii) a map with country slicer, (iv) a treemap with drill down function, (v) a column chart to show the weekly revenue trend, and (vi) a gauge chart to compare the total revenue against the target revenue.</p>
+							<span class="image fit"><img src="img/portfolio/MavenMarketDashboard.png" alt="" style="width: 800px"/></span>
+							<p><br><strong>Insights:</strong>
+								<ul>
+									<li>From the previous month, Maven Market had improved by 5.69% in the number of transactions and by 5.61% in profit. The top three brands by total number of transactions were Hermanos, Ebony, and Tell Tale. Plato, BBB Best, and Cormorant had performed well in terms of profit margin. Despite being a better performer in number of transactions, Tell Tale had the second lower profit margin.</li>
+									<li>Drilling into the regions, the total transactions, profit, and returns in USA and Canada had decreased. The opposite was the case for Mexico.</li>
+									<li>Although the number of transactions had increased overall, the overall number of returns had increased slightly by 2.9%. The three brands with the highest return rates are Horatio, Nationeel, and High Quality.</li>
+									<li>The total revenue met the target revenue. However, USA and Canada did not meet their respective targets; only Mexico met its target.</li>
+									<li>Thus, while Maven Market had increased its number of transactions, attention must be brought to the increased number of returns. It would be meaningful to look into the brands with the highest rates of return. There is also space for USA and Canada to grow in terms of revenue.</li>
+								</ul>
+							
+              </p>
+							
+						</div>
+						
+						<!--<div class='block row' >
+							
+							
+							<div class='col-md-6' >
+								
+								<h4>The Challenge</h4>
+								
+								<p>
+									No dolorem blandit theophrastus eos, nam eu persecuti repudiandae, duo hinc vide aliquip et. Ex atqui voluptatibus eum, cu case intellegebat eu. Ex atqui voluptatibus eum, cu case intellegebat eum.
+								</p>
+								
+							</div>
+							
+							
+							<div class='col-md-6' >
+								
+								<h4>The Solution</h4>
+								
+								<p>
+									No dolorem blandit theophrastus eos, nam eu persecuti repudiandae, duo hinc vide aliquip et. Ex atqui voluptatibus eum, cu case intellegebat eu. Ex atqui voluptatibus eum, cu case intellegebat eum.
+								</p>
+								
+							</div>
+							
+							
+							
+							
+						</div>-->
+						
+					</div>
+					
+				</div>
+
+			</section>
+
+
+			
+			
+			<div class='footer bg-lightgray section-block' >
+				
+				<div class='container' >
+					
+					<div class='row' >
+						
+						<div class='col-md-6 text-left' >
+							<h4>Lu Woon</h4>
+						</div>
+						
+						<div class='col-xs-6 text-right' >
+								<ul class='footer-social' >
+									<li>
+										<a href='https://www.linkedin.com/in/pangluwoon/' target='_blank' >
+											<i class='ion-social-linkedin' ></i>
+										</a>
+									</li>
+									<li>
+										<a href='https://github.com/luwoon' target='_blank' >
+											<i class='ion-social-github' ></i>
+										</a>
+									</li>
+									<li>
+										<a href='mailto:pangluwoon@gmail.com' >
+											<i class='ion-email' ></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						
+					</div>
+					
+					
+				</div>
+				
+			</div>
+			
+			
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>
