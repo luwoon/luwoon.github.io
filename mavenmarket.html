@@ -1,184 +1,87 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>MavenMarket Analytics</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<!-- Fonts-->
-		<link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
-		<!-- Vendors-->
-		<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
-		<!-- App & fonts-->
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,700">
-		<link rel="stylesheet" type="text/css" id="app-stylesheet" href="assets/css/main.css"><!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	
-	<body>
-		<div class="page-wrap" id="root">
-			
-			<!-- header -->
-			<header class="header header--fixed">
-				<div class="header__inner">
-					<div id="title"><a href="index.html">L W</a></div>
-					<div class="navbar-toggle" id="fs-button">
-						<div class="navbar-icon"><span></span></div>
-					</div>
-				</div>
-				
-				<!-- fullscreenmenu__module -->
-				<div class="fullscreenmenu__module" trigger="#fs-button">
-					
-					<!-- overlay-menu -->
-					<nav class="overlay-menu">
-						
-						<!--  -->
-						<ul class="wil-menu-list">
-							<li><a href="index.html">Home</a>
-							</li>
-							<li><a href="about.html">About</a>
-							</li>
-							<li><a href="work.html">Work</a>
-							</li>
-							<!-- <li><a href="blog.html">Blog</a>
-							</li> -->
-							<li><a href="resume.html">Resume</a>
-							</li>
-							<li><a href="contact.html">Contact</a>
-							</li>
-						</ul><!--  -->
-						
-					</nav><!-- End / overlay-menu -->
-					
-				</div><!-- End / fullscreenmenu__module -->
-				
-			</header><!-- End / header -->
-			
-			<!-- Content-->
-			<div class="wil-content">
-				
-				<!-- Section -->
-				<section class="awe-section">
-					<div class="container">
-						
-						<!-- page-title -->
-						<div class="page-title pb-40">
-							<h2 class="page-title__title">MavenMarket Analytics</h2>
-							<p class="page-title__text">Tools used: Power Query, DAX, and Power BI</p>
-							<div class="page-title__divider"></div>
-						</div><!-- End / page-title -->
-						
-					</div>
-				</section>
-				<!-- End / Section -->
-				
-				
-				<!-- Section -->
-				<section class="awe-section bg-gray">
-					<div class="container">
-						
-						<!--  -->
-						<div>
-							<div class="work-detail__entry">
-								<p>This is the final project using Power Query, DAX, and Power BI, from the 'Microsoft Power BI Desktop for Business Intelligence' Udemy course. I went through the whole business intelligence workflow, from connecting and preprocessing data to creating a data model and building an interactive dashboard.</p>
-								<p>Eight CSV files were used for the project. Although the datasets were relatively clean and complete, I performed some wrangling to obtain more insights. The steps included:</p>
-								<ul style="list-style: square;">
-									<li>Merging 'first_name' and 'last_name' columns, separated by a space, to create a 'full_name' column</li>
-									<li>Extracting year from 'birthdate' column</li>
-									<li>Creating a conditional column 'has_children' which equals 'N' if 'total_children' = 0 and 'Y' otherwise</li>
-									<li>Using statistics tools to return number of distinct product brands (111) and distinct product names (1560)</li>
-									<li>Adding calculated column 'discount_price', equal to 90% of original retail price, formatted as fixed decimal number and rounded to two digits</li>
-									<li>Replacing "null" values with zeros in 'recyclable' and 'low-fat' columns</li>
-									<li>Adding calculated column 'area_code' by extracting characters before the dash in 'store_phone' field</li>
-									<li>Using date tools in query editor to add the following columns: Start of Week, Name of Day, Start of Month, Name of Month, Quarter of Year, and Year</li>
-								</ul>
-								<p>The data model created is shown below. The two data tables are connected to the lookup tables but not to each other. All relationships follow a one-to-many cardinality, with primary keys on the lookup side and foreign keys on the data side. Filters are all one-way, and the filter context flows downstream from lookup tables to data tables.</p>
-								<div class="work-img"><img src="/assets/img/works/MavenMarket Data Model.png" alt=""></div><br>
-								<p>Next, I created DAX measures in preparation for data visualisation. The measures include:</p>
-								<ul style="list-style: square;">
-									<li>'Years_Since_Remodel' which calculates number of years between current date and last remodel date</li>
-									<li>'End of Month' which returns last date of current month for each row</li>
-									<li>'60-Day Revenue' which calculates a running revenue total over a 60-day period</li>
-									<li>'YTD Revenue' which calculates year-to-date total revenue</li>
-									<li>'Priority' which equals 'High' for customers who own homes and have Golden membership cards (otherwise 'Standard')</li>
-									<li>'Current Age' which calculates current customer ages using 'birthdate' column</li>
-								</ul>
-								<div class="work-img"><img src="/assets/img/works/DAX.jpg" alt=""></div><br>
-								<p>Finally, I created the dashboard. The features of the dashboard include (i) a matrix showing top 30 brands with data bars and conditional formatting, (ii) KPI cards, (iii) a map with country slicer, (iv) a treemap with drill down function, (v) a column chart to show the weekly revenue trend, and (vi) a gauge chart to compare the total revenue against the target revenue.</p>
-								<div class="work-img"><img src="/assets/img/works/MavenMarketDashboard.png" alt=""></div><br>
-								<p><strong>Insights:</strong></p>
-								<ul style="list-style: square;">
-									<li>From the previous month, Maven Market had improved by 5.69% in the number of transactions and by 5.61% in profit. The top three brands by total number of transactions were Hermanos, Ebony, and Tell Tale. Plato, BBB Best, and Cormorant had performed well in terms of profit margin. Despite being a better performer in number of transactions, Tell Tale had the second lower profit margin.</li>
-									<li>Drilling into the regions, the total transactions, profit, and returns in USA and Canada had decreased. The opposite was the case for Mexico.</li>
-									<li>Although the number of transactions had increased overall, the overall number of returns had increased slightly by 2.9%. The three brands with the highest return rates are Horatio, Nationeel, and High Quality.</li>
-									<li>The total revenue met the target revenue. However, USA and Canada did not meet their respective targets; only Mexico met its target.</li>
-									<li>Thus, while Maven Market had increased its number of transactions, attention must be brought to the increased number of returns. It would be meaningful to look into the brands with the highest rates of return. There is also space for USA and Canada to grow in terms of revenue.</li>
-								</ul>
-							</div>
-						</div><!-- End /  -->
-						
-						<div class="awe-text-center mt-50">
-							<a class="md-btn md-btn--outline-primary " href="/work.html">All work
-							</a>
-						</div>
-					</div>
-				</section>
-				<!-- End / Section -->
-				
-			</div>
-			<!-- End / Content-->
-			
-			<!-- footer -->
-			<div class="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-lg-6 ">
-							<p class="footer__coppy">2024 &copy; Copyright Lu Woon. All rights Reserved.</p>
-						</div>
-						<div class="col-md-6 col-lg-6 ">
-							<div class="footer__social">
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="https://www.linkedin.com/in/pangluwoon/" target="_blank"><i class="social-icon__icon fa fa-linkedin"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="https://github.com/luwoon" target="_blank"><i class="social-icon__icon fa fa-github"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="mailto:pangluwoon@gmail.com" target="_blank"><i class="social-icon__icon fa fa-envelope"></i>
-								</a><!-- End / social-icon -->
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- End / footer -->
-			
-		</div>
-		<!-- Vendors-->
-		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
-		<script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
-		<script type="text/javascript" src="assets/vendors/typed/typed.min.js"></script>
-		<!-- App-->
-		<script type="text/javascript" src="assets/js/main.js"></script>
-	</body>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="Start your development with Meyawo landing page.">
+   <meta name="author" content="Devcrud">
+   <title>MavenMarket Analytics</title>
+   <!-- font icons -->
+   <link rel="stylesheet" href="public_html/assets/vendors/themify-icons/css/themify-icons.css">
+   <!-- Bootstrap + Steller  -->
+   <link rel="stylesheet" href="public_html/assets/css/meyawo.css">
+</head>
+<body>
+
+   <!-- Page Header -->
+   <header class="header header-mini"> 
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">MavenMarket Analytics</li>
+         </ol>
+      </nav>
+      <div class="header-title">MavenMarket Analytics</div> 
+      
+   </header> <!-- End Of Page Header -->
+
+   <!-- main content -->
+   <div class="container">
+
+      <h6 class="mt-5">Tools used: Power BI, Power Query, DAX</h6>
+      <p>This is the final project from the 'Microsoft Power BI Desktop for Business Intelligence' course. I went through the whole business intelligence workflow, from connecting and preprocessing data to creating a data model and building an interactive dashboard.</p>
+      <p>Eight CSV files were used for the project. Although the datasets were relatively clean and complete, I performed some wrangling to obtain more insights. The steps included:
+         <ul>
+            <li>Merging 'first_name' and 'last_name' columns, separated by a space, to create a 'full_name' column</li>
+            <li>Extracting year from 'birthdate' column</li>
+            <li>Creating a conditional column 'has_children' which equals 'N' if 'total_children' = 0 and 'Y' otherwise</li>
+            <li>Using statistics tools to return number of distinct product brands (111) and distinct product names (1560)</li>
+            <li>Adding calculated column 'discount_price', equal to 90% of original retail price, formatted as fixed decimal number and rounded to two digits</li>
+            <li>Replacing "null" values with zeros in 'recyclable' and 'low-fat' columns</li>
+            <li>Adding calculated column 'area_code' by extracting characters before the dash in 'store_phone' field</li>
+            <li>Using date tools in query editor to add the following columns: Start of Week, Name of Day, Start of Month, Name of Month, Quarter of Year, and Year</li>
+         </ul>
+      <p>The data model created is shown below. The two data tables are connected to the lookup tables but not to each other. All relationships follow a one-to-many cardinality, with primary keys on the lookup side and foreign keys on the data side. Filters are all one-way, and the filter context flows downstream from lookup tables to data tables.</p>
+      <img src="public_html/assets/imgs/MavenMarket Data Model.png" alt="" width="1100px">
+      <p><br>Next, I created DAX measures in preparation for data visualisation. The measures include:
+         <ul>
+            <li>'Years_Since_Remodel' which calculates number of years between current date and last remodel date</li>
+            <li>'End of Month' which returns last date of current month for each row</li>
+            <li>'60-Day Revenue' which calculates a running revenue total over a 60-day period</li>
+            <li>'YTD Revenue' which calculates year-to-date total revenue</li>
+            <li>'Priority' which equals 'High' for customers who own homes and have Golden membership cards (otherwise 'Standard')</li>
+            <li>'Current Age' which calculates current customer ages using 'birthdate' column</li>
+         </ul>
+      </p> 
+      <img src="public_html/assets/imgs/DAX.jpg" alt="" width="1100px">
+      <p><br>Finally, I created the dashboard. The features of the dashboard include (i) a matrix showing top 30 brands with data bars and conditional formatting, (ii) KPI cards, (iii) a map with country slicer, (iv) a treemap with drill down function, (v) a column chart to show the weekly revenue trend, and (vi) a gauge chart to compare the total revenue against the target revenue.</p>
+      <img src="public_html/assets/imgs/MavenMarketDashboard.png" alt="" width="1100px">
+      <h6><br>Insights</h6>
+      <ul>
+         <li>From the previous month, Maven Market had improved by 5.69% in the number of transactions and by 5.61% in profit. The top three brands by total number of transactions were Hermanos, Ebony, and Tell Tale. Plato, BBB Best, and Cormorant had performed well in terms of profit margin. Despite being a better performer in number of transactions, Tell Tale had the second lower profit margin.</li>
+         <li>Drilling into the regions, the total transactions, profit, and returns in USA and Canada had decreased. The opposite was the case for Mexico.</li>
+         <li>Although the number of transactions had increased overall, the overall number of returns had increased slightly by 2.9%. The three brands with the highest return rates are Horatio, Nationeel, and High Quality.</li>
+         <li>The total revenue met the target revenue. However, USA and Canada did not meet their respective targets; only Mexico met its target.</li>
+         <li>Thus, while Maven Market had increased its number of transactions, attention must be brought to the increased number of returns. It would be meaningful to look into the brands with the highest rates of return. There is also space for USA and Canada to grow in terms of revenue.</li>
+      </ul>
+      <p><br></p>
+
+
+   <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; LW</p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="mailto:pangluwoon@gmail.com" class="link"><i class="ti-email"></i></a>
+                <a href="https://www.linkedin.com/in/pangluwoon/" class="link" target="_blank"><i class="ti-linkedin"></i></a>
+                <a href="https://github.com/luwoon" class="link" target="_blank"><i class="ti-github"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+   
+   <!-- core  -->
+   <script src="public_html/assets/vendors/jquery/jquery-3.4.1.js"></script>
+   <script src="public_html/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+</body>
 </html>

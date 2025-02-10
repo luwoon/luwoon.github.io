@@ -1,175 +1,77 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>British Airways Customer Insights Analysis</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<!-- Fonts-->
-		<link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/fonts/pe-icon/pe-icon.css">
-		<!-- Vendors-->
-		<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/vendors/swiper/swiper.css">
-		<!-- App & fonts-->
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:400,700">
-		<link rel="stylesheet" type="text/css" id="app-stylesheet" href="assets/css/main.css"><!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-	
-	<body>
-		<div class="page-wrap" id="root">
-			
-			<!-- header -->
-			<header class="header header--fixed">
-				<div class="header__inner">
-					<div id="title"><a href="index.html">L W</a></div>
-					<div class="navbar-toggle" id="fs-button">
-						<div class="navbar-icon"><span></span></div>
-					</div>
-				</div>
-				
-				<!-- fullscreenmenu__module -->
-				<div class="fullscreenmenu__module" trigger="#fs-button">
-					
-					<!-- overlay-menu -->
-					<nav class="overlay-menu">
-						
-						<!--  -->
-						<ul class="wil-menu-list">
-							<li><a href="index.html">Home</a>
-							</li>
-							<li><a href="about.html">About</a>
-							</li>
-							<li><a href="work.html">Work</a>
-							</li>
-							<!-- <li><a href="blog.html">Blog</a>
-							</li> -->
-							<li><a href="resume.html">Resume</a>
-							</li>
-							<li><a href="contact.html">Contact</a>
-							</li>
-						</ul><!--  -->
-						
-					</nav><!-- End / overlay-menu -->
-					
-				</div><!-- End / fullscreenmenu__module -->
-				
-			</header><!-- End / header -->
-			
-			<!-- Content-->
-			<div class="wil-content">
-				
-				<!-- Section -->
-				<section class="awe-section">
-					<div class="container">
-						
-						<!-- page-title -->
-						<div class="page-title pb-40">
-							<h2 class="page-title__title">British Airways Customer Insights Analysis</h2>
-							<p class="page-title__text">Tools used: Python</p>
-							<div class="page-title__divider"></div>
-						</div><!-- End / page-title -->
-						
-					</div>
-				</section>
-				<!-- End / Section -->
-				
-				
-				<!-- Section -->
-				<section class="awe-section bg-gray">
-					<div class="container">
-						
-						<!--  -->
-						<div>
-							<div class="work-detail__entry">
-                <p>This is a project from British Airways' job simulation on Forage. All code can be found <a href="https://github.com/luwoon/Python/tree/main/British%20Airways">here</a>.</p>
-                <p>The first task was to scrape and collect customer feedback from a third-party source and analyse the data to uncover insights. The Beautiful Soup library was used to scrape reviews for British Airways from airlinequality.com.</p>
-								<div class="work-img"><img src="/assets/img/works/BA Web Scrape 2.png" alt=""></div><br>
-								<p>A CSV file containing 1000 reviews was obtained.</p>
-								<div class="work-img"><img src="/assets/img/works/BA Initial CSV.png" alt=""></div><br>
-								<p>The initial CSV generated was unclean as the first column was not titled and the 'reviews' column was not formatted appropriately.</p>
-								<p>Steps were taken to clean the CSV file. They include splitting text into columns, trimming whitespace, and creating data groups.</p>
-								<div class="work-img"><img src="/assets/img/works/BA Cleaned CSV.png" alt=""></div><br>
-								<p>After cleaning, the data was analysed. Word clouds were generated, and sentiment analysis and topic modelling were performed.</p>
-								<div class="work-img"><img src="/assets/img/works/BA Word Cloud.png" alt=""></div><br>
-								<p>Apart from the common words such as 'flight', 'BA' and 'British Airways', some words that stand out are 'service', 'food', 'seat', 'time', 'good', and 'cancelled'.</p>
-								<div class="work-img"><img src="/assets/img/works/BA Sentiment Bar.png" alt=""></div><br>
-								<p>A glimpse at the sentiment distribution shows that over 60% of the reviews were generally positive. Over 30% of the reviews were negative, and some were neutral.</p>
-								<div class="work-img"><img src="/assets/img/works/BA Sentiment Word Cloud.png" alt=""></div><br>
-								<p>Two more word clouds were generated to find out the common words used in positive and negative reviews. For positive reviews, words that stand out include 'food', 'seat', 'time', and 'service'. For negative reviews, words that stand out are 'time', 'seat', 'luggage', 'customer service', and 'cancelled'.</p>
-								<div class="work-img"><img src="/assets/img/works/BA Topic.png" alt=""></div><br>
-								<p>Based on the analysis, the following can be deduced:</p>
-								<ul style="list-style: square;">
-									<li>Most customers are generally satisfied with British Airways. However, a significant proportion (over 30%) of customers had negative reviews toward BA.</li>
-									<li>The popular themes that customers provide feedback on are related to service, food, seating, and likely the punctuality of the airline.</li>
-									<li>From the word cloud on positive reviews, customers were pleased with the food and service provided. Some appreciated the lounge and business class, and had a positive experience.</li>
-									<li>From the word cloud on negative reviews, customers were not happy with areas including cancelled and delayed flights and the handling of luggage.</li>
-									<li>'Seat', 'time' and 'service' appeared in both positive and negative reviews, reflecting the differing feedback customers have.</li>
-									<li>Considering these, it can be said that customers were satistifed with BA's food and service. Areas that did not fare as well are cancelled and delayed flights. More could be done to improve the seating, punctuality, and service, as customers tended to notice and provide feedback on these areas.</li>
-								</ul>
-							</div>
-						</div><!-- End /  -->
-						
-						<div class="awe-text-center mt-50">
-							<a class="md-btn md-btn--outline-primary " href="/work.html">All work
-							</a>
-						</div>
-					</div>
-				</section>
-				<!-- End / Section -->
-				
-			</div>
-			<!-- End / Content-->
-			
-			<!-- footer -->
-			<div class="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-lg-6 ">
-							<p class="footer__coppy">2024 &copy; Copyright Lu Woon. All rights Reserved.</p>
-						</div>
-						<div class="col-md-6 col-lg-6 ">
-							<div class="footer__social">
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="https://www.linkedin.com/in/pangluwoon/" target="_blank"><i class="social-icon__icon fa fa-linkedin"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="https://github.com/luwoon" target="_blank"><i class="social-icon__icon fa fa-github"></i>
-								</a><!-- End / social-icon -->
-								
-								
-								<!-- social-icon -->
-								<a class="social-icon" href="mailto:pangluwoon@gmail.com" target="_blank"><i class="social-icon__icon fa fa-envelope"></i>
-								</a><!-- End / social-icon -->
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- End / footer -->
-			
-		</div>
-		<!-- Vendors-->
-		<script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/isotope-layout/isotope.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery-one-page/jquery.nav.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.easing/jquery.easing.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/masonry-layout/masonry.pkgd.js"></script>
-		<script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
-		<script type="text/javascript" src="assets/vendors/swiper/swiper.jquery.js"></script>
-		<script type="text/javascript" src="assets/vendors/menu/menu.js"></script>
-		<script type="text/javascript" src="assets/vendors/typed/typed.min.js"></script>
-		<!-- App-->
-		<script type="text/javascript" src="assets/js/main.js"></script>
-	</body>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="Start your development with Meyawo landing page.">
+   <meta name="author" content="Devcrud">
+   <title>British Airways Customer Insights Analysis</title>
+   <!-- font icons -->
+   <link rel="stylesheet" href="public_html/assets/vendors/themify-icons/css/themify-icons.css">
+   <!-- Bootstrap + Steller  -->
+   <link rel="stylesheet" href="public_html/assets/css/meyawo.css">
+</head>
+<body>
+
+   <!-- Page Header -->
+   <header class="header header-mini"> 
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">British Airways Customer Insights Analysis</li>
+         </ol>
+      </nav>
+      <div class="header-title">British Airways Customer Insights Analysis</div> 
+      
+   </header> <!-- End Of Page Header -->
+
+   <!-- main content -->
+   <div class="container">
+
+      <h6 class="mt-5">Tools used: Python</h6>
+      <p>This is a project from British Airways' job simulation on Forage. All code can be found <a href="https://github.com/luwoon/Python/tree/main/British%20Airways">here</a>.</p>
+      <p>The first task was to scrape and collect customer feedback from a third-party source and analyse the data to uncover insights. The Beautiful Soup library was used to scrape reviews for British Airways from airlinequality.com.</p>
+      <img src="public_html/assets/imgs/BA Web Scrape 2.png" alt="" width="1100px">
+      <p><br>A CSV file containing 1000 reviews was obtained.</p>
+      <img src="public_html/assets/imgs/BA Initial CSV.png" alt="" width="1100px">
+      <p><br>The initial CSV generated was unclean as the first column was not titled and the 'reviews' column was not formatted appropriately. Steps were taken to clean the CSV file. They include splitting text into columns, trimming whitespace, and creating data groups.</p>
+      <img src="public_html/assets/imgs/BA Cleaned CSV.png" alt="" width="1100px">
+      <p><br>After cleaning, the data was analysed. Word clouds were generated, and sentiment analysis and topic modelling were performed.</p>
+      <img src="public_html/assets/imgs/BA Word Cloud.png" alt="" width="1100px">
+      <p><br>Apart from the common words such as 'flight', 'BA' and 'British Airways', some words that stand out are 'service', 'food', 'seat', 'time', 'good', and 'cancelled'.</p>
+      <img src="public_html/assets/imgs/BA Sentiment Bar.png" alt="" width="1100px">
+      <p><br>A glimpse at the sentiment distribution shows that over 60% of the reviews were generally positive. Over 30% of the reviews were negative, and some were neutral.</p>
+      <img src="public_html/assets/imgs/BA Sentiment Word Cloud.png" alt="" width="1100px">
+      <p><br>Two more word clouds were generated to find out the common words used in positive and negative reviews. For positive reviews, words that stand out include 'food', 'seat', 'time', and 'service'. For negative reviews, words that stand out are 'time', 'seat', 'luggage', 'customer service', and 'cancelled'.</p>
+      <img src="public_html/assets/imgs/BA Topic.png" alt="" width="1100px">
+      <p><br>Based on the analysis, the following can be deduced:
+         <ul>
+            <li>Most customers are generally satisfied with British Airways. However, a significant proportion (over 30%) of customers had negative reviews toward BA.</li>
+            <li>The popular themes that customers provide feedback on are related to service, food, seating, and likely the punctuality of the airline.</li>
+            <li>From the word cloud on positive reviews, customers were pleased with the food and service provided. Some appreciated the lounge and business class, and had a positive experience.</li>
+            <li>From the word cloud on negative reviews, customers were not happy with areas including cancelled and delayed flights and the handling of luggage.</li>
+            <li>'Seat', 'time' and 'service' appeared in both positive and negative reviews, reflecting the differing feedback customers have.</li>
+            <li>Considering these, it can be said that customers were satistifed with BA's food and service. Areas that did not fare as well are cancelled and delayed flights. More could be done to improve the seating, punctuality, and service, as customers tended to notice and provide feedback on these areas.</li>
+         </ul>
+      </p>
+
+      <p><br></p>
+
+   <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; LW</p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="mailto:pangluwoon@gmail.com" class="link"><i class="ti-email"></i></a>
+                <a href="https://www.linkedin.com/in/pangluwoon/" class="link" target="_blank"><i class="ti-linkedin"></i></a>
+                <a href="https://github.com/luwoon" class="link" target="_blank"><i class="ti-github"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+   
+   <!-- core  -->
+   <script src="public_html/assets/vendors/jquery/jquery-3.4.1.js"></script>
+   <script src="public_html/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+</body>
 </html>
